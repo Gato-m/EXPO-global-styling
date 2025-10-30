@@ -1,12 +1,13 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
-import { COLORS, FONTSIZES, SPACING } from '../../globalStyles/theme';
+import { COLORS, TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
+import { Title } from '../../globalStyles/typography';
 
 export default function Contacts() {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>CONTACTS</Text>
+        <Title style={styles.title}>CONTACTS</Title>
         <Link href="/" style={styles.button}>
           Go to Home screen
         </Link>
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: COLORS.text,
-    fontSize: FONTSIZES.xl,
+    fontSize: TYPOGRAPHY.xl,
     fontWeight: 'bold',
     marginBottom: SPACING.md,
     textAlign: 'center',
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     color: COLORS.text,
   },
   button: {
-    fontSize: FONTSIZES.lg,
+    fontSize: TYPOGRAPHY.lg,
     textDecorationLine: 'underline',
     color: COLORS.primary,
   },

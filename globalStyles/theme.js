@@ -3,13 +3,12 @@ export const COLORS = {
   primary: '#0ea125',
   background: '#e3e3e3',
   backgroundLite: '#f5f5f5',
-  backgroundLiteBorder: '#e3e3e3',
-  backgroundPhone: '#green',
-  borderColor: '#d7d7d7',
+  backgroundLiteBorder: '#ecebebff',
+  borderColorGray: '#d7d7d7',
   text: '#333333',
   slimiba: '#FF3B30',
   atvalinajums: '#6fde43',
-  maaciibas: '#5856D6',
+  maaciibas: '#1dcc92ff',
   iislaiciigs: '#5AC8FA',
   cits: '#AF52DE',
   komandejums: '#FF9500',
@@ -21,7 +20,7 @@ export const SPACING = {
   lg: 24,
   xl: 32,
 };
-export const FONTSIZES = {
+export const TYPOGRAPHY = {
   sm: 12,
   md: 16,
   lg: 20,

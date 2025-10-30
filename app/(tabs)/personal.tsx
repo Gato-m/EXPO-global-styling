@@ -1,14 +1,14 @@
-import { Link } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
-import { Body, Title } from '../../globalStyles/typography';
+import { Link } from 'expo-router';
+import { Title, Body } from '../../globalStyles/typography';
 
 import { COLORS, TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
 
-export default function Statistic() {
+export default function Personal() {
   return (
     <View style={styles.container}>
-      <Title style={styles.title}>STATISTIC</Title>
-      <Body style={[styles.text, { marginBottom: SPACING.md }]}>Statistic screen</Body>
+      <Title style={styles.title}>DARBINIEKI</Title>
+      <Body style={[styles.text, { marginBottom: SPACING.md }]}>Personal screen</Body>
 
       <Link href="/" style={styles.button}>
         Go to Home screen
