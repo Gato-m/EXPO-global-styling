@@ -1,8 +1,10 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import { Link } from 'expo-router';
+import { useTheme } from '../../globalStyles/ThemeContext';
 
 export default function Statistic() {
+  const theme = useTheme();
   return (
     <View style={styles.container}>
       <Text style={[styles.text, { marginBottom: 30 }]}>statistic</Text>
