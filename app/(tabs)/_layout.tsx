@@ -1,63 +1,65 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Tabs } from 'expo-router';
+import { useTheme } from '../../globalStyles/ThemeContext';
 
 export default function TabLayout() {
+  const { theme, isDark } = useTheme();
+
+  // Define tab screens with their configurations
+  const tabs = [
+    {
+      name: 'statistic',
+      title: 'Statistics',
+      icon: (focused: boolean) => 
+        focused ? 'stats-chart' : 'stats-chart-outline',
+    },
+    {
+      name: 'personal',
+      title: 'Darbinieki',
+      icon: (focused: boolean) => 
+        focused ? 'people' : 'people-outline',
+    },
+    {
+      name: 'admin',
+      title: 'Admin',
+      icon: (focused: boolean) => 
+        focused ? 'settings' : 'settings-outline',
+    },
+  ];
+
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#e4ba23ff',
+        tabBarActiveTintColor: theme.colors.primary,
         headerStyle: {
-          backgroundColor: '#25292e',
+          backgroundColor: theme.colors.background,
         },
+        headerTintColor: theme.colors.text,
         headerShadowVisible: false,
-        headerTintColor: '#fff',
         tabBarStyle: {
-          paddingTop: 10,
-          paddingHorizontal: 10,
-          backgroundColor: '#1a1a1bff',
+          paddingTop: 8,
+          backgroundColor: isDark ? '#1a1a1bff' : '#f5f5f5',
+          borderTopColor: isDark ? '#333' : '#e0e0e0',
         },
+        tabBarInactiveTintColor: theme.colors.text,
       }}
     >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="statistic"
-        options={{
-          title: 'Statistics',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={focused ? 'stats-chart' : 'stats-chart-outline'}
-              color={color}
-              size={24}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="personal"
-        options={{
-          title: 'Darbinieki',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'people-sharp' : 'people-outline'} color={color} size={24} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="admin"
-        options={{
-          title: 'Admin',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'people-sharp' : 'people-outline'} color={color} size={24} />
-          ),
-        }}
-      />
+      {tabs.map((tab) => (
+        <Tabs.Screen
+          key={tab.name}
+          name={tab.name}
+          options={{
+            title: tab.title,
+            tabBarIcon: ({ color, focused }) => (
+              <Ionicons
+                name={tab.icon(focused)}
+                color={color}
+                size={24}
+              />
+            ),
+          }}
+        />
+      ))}
     </Tabs>
   );
 }

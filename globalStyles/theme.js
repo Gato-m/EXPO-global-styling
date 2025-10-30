@@ -1,4 +1,41 @@
 // theme.ts
+// Dark theme settings
+// theme.js
+
+export const lightTheme = {
+  colors: {
+    background: '#e3e3e3',
+    text: '#000000',
+    primary: '#0ea125',
+  },
+  spacing: {
+    md: 16,
+  },
+  buttonTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#333333',
+  },
+  // utt.
+};
+
+export const darkTheme = {
+  colors: {
+    background: '#000000',
+    text: '#e3e3e3',
+    primary: '#c9711efd',
+  },
+  spacing: {
+    md: 16,
+  },
+  buttonTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#c9711efd',
+  },
+};
+
+//
 export const COLORS = {
   primary: '#0ea125',
   background: '#e3e3e3',

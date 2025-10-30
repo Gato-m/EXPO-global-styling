@@ -1,6 +1,7 @@
 // globalStyling/ThemeContext.js
 import { createContext, useContext, useState } from 'react';
 import { Appearance } from 'react-native';
+import { lightTheme, darkTheme } from './theme';
 
 const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {

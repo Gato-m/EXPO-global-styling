@@ -4,8 +4,11 @@ import { Title, Body } from '../../globalStyles/typography';
 import { flexPatterns } from '../../globalStyles/commonStyles';
 
 import { COLORS, TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
+import { useTheme } from '../../globalStyles/ThemeContext';
 
 export default function Personal() {
+  const { theme } = useTheme();
+
   return (
     <View style={[styles.container, flexPatterns.center]}>
       <Title style={styles.title}>DARBINIEKI</Title>

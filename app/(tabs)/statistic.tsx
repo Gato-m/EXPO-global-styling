@@ -4,8 +4,10 @@ import { Body, Title } from '../../globalStyles/typography';
 import { flexPatterns } from '../../globalStyles/commonStyles';
 
 import { COLORS, TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
+import { useTheme } from '../../globalStyles/ThemeContext';
 
 export default function Statistic() {
+  const { theme } = useTheme();
   return (
     <View style={[styles.container, flexPatterns.center]}>
       <Title style={styles.title}>STATISTIC</Title>
