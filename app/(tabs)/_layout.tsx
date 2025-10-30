@@ -13,6 +13,7 @@ export default function TabLayout() {
         headerTintColor: '#fff',
         tabBarStyle: {
           paddingTop: 10,
+          paddingHorizontal: 10,
           backgroundColor: '#1a1a1bff',
         },
       }}
