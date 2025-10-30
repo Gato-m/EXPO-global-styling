@@ -1,12 +1,13 @@
 import { Link } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Body, Title } from '../../globalStyles/typography';
+import { flexPatterns } from '../../globalStyles/commonStyles';
 
 import { COLORS, TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
 
 export default function Statistic() {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, flexPatterns.center]}>
       <Title style={styles.title}>STATISTIC</Title>
       <Body style={[styles.text, { marginBottom: SPACING.md }]}>Statistic screen</Body>
 
@@ -21,8 +22,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.background,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   title: {
     color: COLORS.text,

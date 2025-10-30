@@ -12,7 +12,7 @@ export default function TabLayout() {
         headerShadowVisible: false,
         headerTintColor: '#fff',
         tabBarStyle: {
-          paddingTop: 8,
+          paddingTop: 10,
           backgroundColor: '#1a1a1bff',
         },
       }}

@@ -2,12 +2,13 @@ import { Link } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 import { Body, Title } from '../../globalStyles/typography';
 import { COLORS, TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
+import { flexPatterns } from '../../globalStyles/commonStyles';
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Title style={[styles.text, { marginBottom: 30 }]}>Home screen</Title>
-      <Body style={[styles.text, { marginBottom: SPACING.md }]}>Statistic screen</Body>
+    <View style={[styles.container, flexPatterns.center]}>
+      <Title style={styles.title}>HOME SCREEN</Title>
+      <Body style={[styles.text, { marginBottom: SPACING.md }]}>Home screen</Body>
 
       <Link href="/personal" style={styles.button}>
         Go to Contacts screen
@@ -26,8 +27,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.background,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   title: {
     color: COLORS.text,
