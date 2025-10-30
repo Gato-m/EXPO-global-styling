@@ -1,13 +1,12 @@
-import { View, Text, StyleSheet } from 'react-native';
-import React from 'react';
 import { Link } from 'expo-router';
-import { useTheme } from '../../globalStyles/ThemeContext';
+import { StyleSheet, Text, View } from 'react-native';
+
+import { COLORS, FONTSIZES, SPACING } from '../../globalStyles/theme';
 
 export default function Statistic() {
-  const theme = useTheme();
   return (
     <View style={styles.container}>
-      <Text style={[styles.text, { marginBottom: 30 }]}>statistic</Text>
+      <Text style={styles.title}>STATISTIC</Text>
       <Link href="/" style={styles.button}>
         Go to Home screen
       </Link>
@@ -18,16 +17,22 @@ export default function Statistic() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: COLORS.background,
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    color: COLORS.text,
+    fontSize: FONTSIZES.xl,
+    fontWeight: 'bold',
+    marginBottom: SPACING.md,
+  },
   text: {
-    color: '#fff',
+    color: COLORS.text,
   },
   button: {
-    fontSize: 20,
+    fontSize: FONTSIZES.lg,
     textDecorationLine: 'underline',
-    color: '#fff',
+    color: COLORS.primary,
   },
 });
