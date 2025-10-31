@@ -1,13 +1,13 @@
 import { StyleSheet, View } from 'react-native';
 import { Link } from 'expo-router';
 import { Title, Body } from '../../globalStyles/typography';
-import { flexPatterns } from '../../globalStyles/commonStyles';
+import { flexPatterns } from '../../globalStyles/layoutStyles';
 import { TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
 import { useTheme } from '../../globalStyles/ThemeContext';
 
 export default function Personal() {
   const { theme } = useTheme();
-  
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,

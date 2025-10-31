@@ -1,13 +1,13 @@
 import { Link } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 import { Body, Title } from '../../globalStyles/typography';
-import { flexPatterns } from '../../globalStyles/commonStyles';
+import { flexPatterns } from '../../globalStyles/layoutStyles';
 import { TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
 import { useTheme } from '../../globalStyles/ThemeContext';
 
 export default function Statistic() {
   const { theme } = useTheme();
-  
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,

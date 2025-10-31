@@ -2,7 +2,7 @@ import { Link } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 import { Body, Title } from '../../globalStyles/typography';
 import { COLORS, TYPOGRAPHY, SPACING } from '../../globalStyles/theme';
-import { flexPatterns } from '../../globalStyles/commonStyles';
+import { flexPatterns } from '../../globalStyles/layoutStyles';
 import { useTheme } from '../../globalStyles/ThemeContext';
 import { ThemeToggle } from '../../components/ThemeToggle';
 
